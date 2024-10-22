@@ -1,0 +1,175 @@
+/**
+   * The following styles get applied inside the editor only.
+   *
+   * Replace them with your own styles or remove the file completely.
+   */
+
+/*styles for coreui slider*/
+.carousel .carousel-control-next,
+.carousel .carousel-control-prev {
+	width: 5%;
+	max-height: 2.2rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+/* END for coreui slider*/
+
+.mr-slider__is-hovered {
+	outline: 2px solid transparent;
+	cursor: pointer;
+	border-radius: 2px;
+	transition: outline 0.2s ease;
+}
+
+.mr-slider__is-hovered:hover {
+	outline: 2px solid var(--wp-admin-theme-color);
+}
+
+/* LINK */
+.slider__editor__link {
+	position: relative;
+}
+
+.slider-editor__link_popup {
+	display: flex;
+	padding: 0.6rem;
+	flex-direction: column;
+	gap: 0.8rem;
+	align-items: center;
+	min-width: 240px;
+}
+
+.slider-editor__link_popup > h4 {
+	font-size: 1.125rem;
+}
+
+.slider-editor__link_popup > h4,
+.slider-editor__link_popup label {
+	margin: 0;
+}
+
+.slider-editor__link_popup label {
+	font-size: 0.8rem;
+}
+
+/** END OF LINK **/
+
+/* DELETE WITH POPUP */
+.slider-editor__delete {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	color: var(--wp-admin-theme-color);
+	cursor: pointer;
+}
+
+.slider-editor__delete_popup_wrapper {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 6px;
+}
+
+.slider-editor__delete_popup {
+	padding: 0.6rem;
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 0.8rem;
+}
+
+.slider-editor__delete_popup_wrapper h4 {
+	font-size: 1rem;
+	margin: 0;
+}
+/**--- END OF DELETE WITH POPUP ---**/
+
+.slider-editor--relative {
+	position: relative;
+}
+
+.slider-editor__save-button {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+}
+
+/* ADD IMAGE */
+.slider-editor__image {
+	display: block;
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.slider-editor__wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 300px;
+}
+
+.slider-editor__add_image {
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	top: 50%;
+	right: 10%;
+	width: 80%;
+	height: 80%;
+	cursor: pointer;
+	border-radius: 6px;
+	background-color: grey;
+	transition: opacity 0.4s ease;
+	border: none;
+	padding: 1rem 2rem;
+	font-size: 1.4rem;
+	font-weight: 600;
+	z-index: 10;
+	transform: translateY(-50%);
+}
+
+.slider-editor__wrapper:hover .slider-editor__add_image {
+	opacity: 0.4;
+	pointer-events: all;
+}
+
+.slider-editor--position-relative {
+	position: relative;
+}
+/**-- END OF ADD IMAGE ---**/
+
+.slider-editor {
+	min-height: 360px;
+}
+
+:root {
+	--block-padding: 70px;
+}
+
+.top-slider {
+	padding: var(--block-padding) 0;
+	position: relative;
+}
+
+.rn-slider__position_wrapper {
+	position: relative;
+}
+
+.rn-slider-editor--button-position {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 1rem;
+}
+
+.rn-slider-editor--center {
+	text-align: center;
+}

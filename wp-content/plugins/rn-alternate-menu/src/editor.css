@@ -1,0 +1,16 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ .rn-placeholder{
+    padding: 1rem;
+    background-color: lightgray;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.rn-placeholder p{
+    margin: 0;
+}

@@ -1,0 +1,300 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ 
+ */
+@import url('./css/button.css');
+
+:root{
+	--rn-header-max-width-1: 1240px;
+	--not-main-text: var(--slate-grey);
+    --header-row-bg: var(--black-40);
+    --elements-left-right-padding: clamp(0.625rem,1.3vw,0.94rem);
+    --border-radius: 4px;
+    --top-border-color:var(--black-40);
+    --accent-hover:var(--slate-grey);
+}
+
+.mr-header{
+    position: relative;
+}
+
+.header__container{
+	margin: 0 auto;
+	max-width: var(--rn-header-max-width-1);
+}
+
+.header{
+    position: relative;
+}
+.header__top-row{
+    background-color: var(--header-row-bg);
+    padding: .3rem 0;
+}
+
+.header__main-row *{
+    box-sizing: border-box;
+}
+
+.hover_underline:hover{
+    text-decoration: underline;
+}
+
+.header__main-row{
+    padding: 1.5rem 0;
+}
+
+
+.header__logo-img,
+.custom-logo-link{
+    width: 2.75rem;
+    height: 2.75rem;
+}
+.header__logo-img>img{
+    width: 100%;
+}
+.custom-logo-link{
+    margin-right: 5px;
+}
+
+.header__logo-text{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    margin-bottom: .875rem;
+}
+
+.header__logo-title{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.header__logo-title>p{
+    margin: 0;
+    font-size: 1rem;
+}
+.header__logo-title>h4{
+    color: var(--black);
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0
+}
+
+.header__logo-slogan{
+    color: var(--not-main-text);
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+
+/*search*/
+.header__search{
+    position: relative;
+    color: var(--not-main-text);
+    padding: 0 var(--elements-left-right-padding);
+    flex: 1 0 auto;
+}
+.header__search>form{
+    position: relative;
+    width: 100%;
+}
+.header__search button{
+    position: absolute;
+    right: .5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header__search-input{  
+    padding: .5rem 2.5rem .5rem 1.25rem;
+    border: none;
+    border-radius: var(--border-radius);
+    border: solid 2px var(--top-border-color);
+    width: 100%;
+}
+
+.header__search-input::placeholder{
+    color: var(--not-main-text);
+}
+
+.mobile_menu_wrapper .header__search{
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .header__search{
+        display: none
+    }
+    .mobile_menu_wrapper .header__search{
+        display: block;
+    }
+}
+/* --- header_search --- */
+
+
+.header__contacts{
+    display: flex;
+    flex: 0 0 auto;
+    padding: 0 var(--elements-left-right-padding);
+    gap: calc(var(--elements-left-right-padding));
+}
+
+.header__phone{
+    color: var(--black);
+    font-weight: 500;
+    font-size: clamp(.98rem, 1.8vw, 1.375rem);
+    line-height: clamp(1.078rem, 1.97vw, 1.5rem);
+}
+
+.header__phone-label{
+    font-size: var(--text-small);
+    color: var(--not-main-text);
+}
+@media screen and (max-width: 500px) {
+    .header__contacts{
+        display: none
+    }
+}
+
+
+.header__menu-row{
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+/*КОНТАКТНАЯ ФОРМА В ХЭДЕЕРЕ*/
+.header__contacts_contact-form{
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--black-40);
+    z-index: 299;
+    opacity: 0;
+    transition: opacity 400ms ease;
+    transform-origin: 25% 25%;
+    transform: scale(0);
+}
+.header__contacts_contact-form.active{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.header__contacts_contact-form .wpcf7{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: clamp(22.5rem, 48vw, 62.5rem);
+    padding: 2rem;
+    background-color: var(--top-border-color);
+    border-radius: 10px;
+    transition: transform ease 400ms 100ms;
+}
+.header__contacts_contact-form.active .wpcf7{
+    transform: translate(-50%, -50%);
+}
+
+.header__contacts_contact-form .wpcf7 label>br{
+    margin-bottom: .875rem;
+}
+
+.header__contacts_contact-form .wpcf7 input,
+.header__contacts_contact-form .wpcf7 textarea{
+    padding: .4rem 1rem;
+    width: 100%;
+    border: solid 2px var(--black-40);
+    border-radius: 6px;
+    appearance: none;
+}
+.header__contacts_contact-form .wpcf7 input[type="submit"]{
+    border: none;
+    background-color: var(--accent-hover);
+    color: var(--white);
+    transition: background 400ms ease;
+    width: 50%;
+}
+.header__contacts_contact-form .wpcf7 input[type="submit"]:hover{
+    background-color: var(--accent);
+}
+.header__contacts_contact-form .wpcf7 .wpcf7-captchar{
+    max-width: 40%;
+}
+
+.header__contacts_backbutton{
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    appearance: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* ROW */
+.rn-row{
+    display: flex;
+    align-items: center;
+    color: var(--elemements-color);
+    font-size: var(--text-small);
+}
+
+.rn-row__block{
+    padding: 0 var(--elements-left-right-padding);
+    vertical-align: baseline;
+    flex: 0 0 auto;
+}
+@media screen and (max-width: 500px) {
+    .rn-row__block{
+        display: none;
+    }
+}
+
+.rn-row__block>*{
+    line-height: 1;
+    margin-right: 0.5rem;
+}
+
+.rn-row__special{
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    transition: color 400ms ease;
+    cursor: pointer;
+}
+.rn-row__special:hover{
+    color: var(--main_elem_hover_color);
+}
+.rn-row__special svg{
+    width: clamp(1.25rem, 2.6vw, 2rem);
+    height: clamp(0.94rem, 2vw, 1.5rem) 
+}
+.rn-row__special span{
+    line-height: 1;
+}
+
+.rn-row__links{
+    display: flex;
+    width: 100%;
+    gap: var(--elements-left-right-padding);
+    align-items: end;
+}
+@media screen and (max-width: 800px) {
+    .rn-row__links{
+        display: none;
+    }
+}
+
+
+/*addons*/
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    .rn-row--mobile-center{
+        justify-content: center;
+    }
+}

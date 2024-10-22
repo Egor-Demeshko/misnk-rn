@@ -1,0 +1,34 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/rn-news",
+	"version": "0.1.0",
+	"title": "Rn News",
+	"category": "widgets",
+	"icon": "welcome-widgets-menus",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"attributes": {
+		"blockTitle": {
+			"type": "string",
+			"default": "Все записи"
+		},
+		"linkTitle": {
+			"type": "string",
+			"default": "Читать все новости"
+		},
+		"newsLinkTitle": {
+			"type": "string",
+			"default": "Читать далее"
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "rn-news",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}

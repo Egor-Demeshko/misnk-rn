@@ -1,0 +1,24 @@
+.rn-btn{
+    border-radius: var(--border-radius);
+    padding: .5rem 1rem;
+    font-size: .875rem;
+    font-weight: 500;
+    letter-spacing: .5px;
+}
+
+@media screen and (max-width: 500px) {
+    .rn-btn--big-mobile{
+        padding: var(--big-mobile-button);
+        font-size: 1rem;
+    }
+}
+
+.rn-btn-main{
+    background-color: var(--accent);
+    color: var(--white);
+    transition: background-color 400ms ease;
+}
+
+.rn-btn-main:hover{
+    background-color: var(--accent-hover);
+}

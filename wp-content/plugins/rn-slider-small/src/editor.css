@@ -1,0 +1,138 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.rn-slider-editor--center {
+	text-align: center;
+}
+
+.rn-slider-editor-slide {
+	display: flex;
+	justify-content: center;
+}
+
+.rn-slider-small-wrapper {
+	position: relative;
+}
+
+.rn-slider-small__add-button {
+	position: absolute;
+	left: 50%;
+	bottom: 1rem;
+	transform: translateX(-50%);
+}
+
+/* IMAGE */
+.info_slide_editor__image_wrapper {
+	position: relative;
+}
+
+.slider-small-editor__add_image {
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	top: 50%;
+	width: 90%;
+	aspect-ratio: 1/1;
+	left: 50%;
+	cursor: pointer;
+	border-radius: 50%;
+	background-color: grey;
+	transition: opacity 0.4s ease;
+	border: none;
+	padding: 0.2rem;
+	font-size: 1.4rem;
+	font-weight: 600;
+	z-index: 10;
+	transform: translate(-50%, -50%);
+}
+
+.info_slide_editor__wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.info_slide_editor__image_wrapper:hover .slider-small-editor__add_image {
+	opacity: 0.7;
+	pointer-events: all;
+}
+
+.slider-small-editor__add_image_icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 1px;
+	height: 1px;
+}
+
+.slider-small-editor__add_image_icon::before {
+	font-size: 3rem;
+}
+/** --- END OF IMAGE ---**/
+
+/* DELETE WITH POPUP */
+.slider-editor__delete {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	color: var(--wp-admin-theme-color);
+	cursor: pointer;
+}
+
+.slider-editor__delete_popup_wrapper {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 6px;
+}
+
+.slider-editor__delete_popup {
+	padding: 0.6rem;
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 0.8rem;
+}
+
+.slider-editor__delete_popup_wrapper h4 {
+	font-size: 1rem;
+	margin: 0;
+}
+/**--- END OF DELETE WITH POPUP ---**/
+
+/** SAVE BUTTON */
+.slider-editor__save-button {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	transform: translateY(-100%);
+}
+
+/** LINK */
+.info_slide_editor__link {
+	position: relative;
+}
+/** --- LINK --- */
+
+.mr-slider__is-hovered {
+	outline: 2px solid transparent;
+	cursor: pointer;
+	border-radius: 2px;
+	transition: outline 0.2s ease;
+}
+
+.mr-slider__is-hovered:hover {
+	outline: 2px solid var(--wp-admin-theme-color);
+}

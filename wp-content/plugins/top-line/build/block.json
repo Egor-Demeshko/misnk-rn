@@ -1,0 +1,93 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "minsk-rn/topline",
+  "allowedBlocks": [
+    "core/shortcode"
+  ],
+  "version": "0.1.0",
+  "title": "Top Line",
+  "category": "widgets",
+  "description": "Example block scaffolded with Create Block tool.",
+  "example": {},
+  "textdomain": "header",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "socials": {
+      "type": "array",
+      "required": true,
+      "default": [
+        {
+          "id": 0,
+          "slug": "twitter",
+          "link": "https://twitter.com/",
+          "active": true
+        },
+        {
+          "id": 1,
+          "slug": "vk",
+          "link": "https://vk.com/",
+          "active": true
+        },
+        {
+          "id": 2,
+          "slug": "telegram",
+          "link": "https://t.me/",
+          "active": true
+        },
+        {
+          "id": 3,
+          "slug": "whatsapp",
+          "link": "https://wa.me/",
+          "active": true
+        },
+        {
+          "id": 4,
+          "slug": "viber",
+          "link": "viber://chat?number=",
+          "active": true
+        },
+        {
+          "id": 5,
+          "slug": "youtube",
+          "link": "https://www.youtube.com/channel/",
+          "active": true
+        },
+        {
+          "id": 6,
+          "slug": "instagram",
+          "link": "https://www.instagram.com/",
+          "active": true
+        }
+      ]
+    },
+    "shortcode": {
+      "type": "string",
+      "default": "[gtranslate]"
+    },
+    "workingHoursLabel": {
+      "type": "string",
+      "default": "Время работы: "
+    },
+    "workingHours": {
+      "type": "string",
+      "default": "10:00 - 19:00"
+    },
+    "email": {
+      "type": "string",
+      "default": "email@example.com"
+    },
+    "emailLabel": {
+      "type": "string",
+      "default": "Email"
+    },
+    "versionLabel": {
+      "type": "string",
+      "default": "Версия для слабовидящих"
+    }
+  }
+}

@@ -1,0 +1,210 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.rn_eliminate_btn {
+	border: none;
+	background: none;
+	padding: 0;
+	appearance: none;
+}
+
+.rn_eliminate-link {
+	text-decoration: none;
+	color: inherit;
+	line-height: 1;
+}
+
+.info_slide {
+	padding: var(--site-main-step) 0;
+	height: 540px;
+}
+
+.info_slide__slides {
+	align-items: stretch;
+	height: 100%;
+}
+.info_slide__track {
+	height: 100%;
+}
+
+.info_slide__slides > li {
+	display: flex;
+	justify-content: center;
+}
+
+.info_slide__slide {
+	width: 284px;
+	padding: clamp(1.25rem, 3.2vw, 2.5rem) clamp(0.875rem, 2.25vw, 1.75rem);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	border: 2px solid var(--top-border-color);
+	box-shadow: var(--box-shadow-transparent);
+	transition: box-shadow ease 400ms;
+	cursor: pointer;
+	height: 100% !important;
+	gap: 2rem;
+}
+.info_slide__slide:hover {
+	box-shadow: var(--box-shadow);
+}
+
+@media screen and (max-width: 800px) {
+	.info_slide__slide {
+		max-width: unset;
+		flex: 1;
+	}
+}
+
+.info_slide__slide_top {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.info_slide__image {
+	border-radius: 50%;
+	width: 8.125rem;
+	height: 8.125rem;
+}
+
+.info_slide__title {
+	font-weight: 500;
+	color: var(--main-text);
+}
+
+.info_slide__additional {
+	color: var(--additional-text);
+	font-size: 0.875rem;
+	text-align: center;
+	overflow: hidden;
+	flex: 1 0;
+}
+@media screen and (max-width: 500px) {
+	.info_slide__title {
+		font-size: 1.25rem;
+	}
+	.info_slide__additional {
+		font-size: 1rem;
+	}
+}
+.info_slide__title,
+.info_slide__additional {
+	margin: 0;
+	margin-top: 1rem;
+}
+
+.info_slide__button {
+	border: 2px solid var(--accent);
+	border-radius: 4px;
+	transition:
+		background-color 400ms ease,
+		color 400ms ease;
+	background-color: transparent;
+	color: var(--accent);
+	padding: 0.5rem 1rem;
+}
+.info_slide__button:hover {
+	background-color: var(--accent);
+	color: var(--white);
+}
+
+@media screen and (max-width: 500px) {
+	.info_slider--arrows-always {
+		display: block;
+	}
+}
+
+/* BUTTON */
+.rn-btn {
+	border-radius: var(--border-radius);
+	padding: 0.5rem 1rem;
+	font-size: 0.875rem;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 500px) {
+	.rn-btn--big-mobile {
+		padding: var(--big-mobile-button);
+		font-size: 1rem;
+	}
+}
+
+.rn-btn-main {
+	background-color: var(--accent);
+	color: var(--white);
+	transition: background-color 400ms ease;
+}
+
+.rn-btn-main:hover {
+	background-color: var(--accent-hover);
+}
+/** END OF BUTTON**/
+
+/** GLIDE */
+.glide {
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+}
+.glide * {
+	box-sizing: inherit;
+}
+.glide__track {
+	overflow: hidden;
+}
+.glide__slides {
+	position: relative;
+	width: 100%;
+	list-style: none;
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+	touch-action: pan-Y;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+	display: flex;
+	flex-wrap: nowrap;
+	will-change: transform;
+}
+.glide__slides--dragging {
+	user-select: none;
+}
+.glide__slide {
+	width: 100%;
+	height: 100%;
+	flex-shrink: 0;
+	white-space: normal;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: transparent;
+}
+.glide__slide a {
+	user-select: none;
+	-webkit-user-drag: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+.glide__arrows {
+	-webkit-touch-callout: none;
+	user-select: none;
+}
+.glide__bullets {
+	-webkit-touch-callout: none;
+	user-select: none;
+}
+.glide--rtl {
+	direction: rtl;
+} /*# sourceMappingURL=glide.core.min.css.map */
+
+.top-slider__button_arrow[data-glide-dir=">"],
+.top-slider__button_arrow[data-glide-dir="<"] {
+	top: calc(var(--block-height) / 2);
+}

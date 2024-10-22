@@ -1,0 +1,67 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/mr-headers",
+	"version": "0.1.0",
+	"title": "Heading block for Minsk Region theme",
+	"category": "widgets",
+	"icon": "heading",
+	"description": "Heading block for Minsk Region theme",
+	"attributes": {
+		"topname": {
+			"type": "string",
+			"default": "Верхний уровень названия организации"
+		},
+		"middlename": {
+			"type": "string",
+			"default": "Средний уровень названия организации"
+		},
+		"bottomname": {
+			"type": "string",
+			"default": "Нижний уровень названия организации"
+		},
+		"description": {
+			"type": "string",
+			"default": "Описание"
+		},
+		"logoUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"logoImgId": {
+			"type": "number",
+			"default": 0
+		},
+		"logoAlt": {
+			"type": "string",
+			"default": "Логотип компании"
+		},
+		"mainPhone": {
+			"type": "string",
+			"default": "+1111111111"
+		},
+		"phoneLabel": {
+			"type": "string",
+			"default": "Телефон"
+		},
+		"shortcode": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"example": {},
+	"supports": {
+		"html": false,
+		"color": {
+			"background": true,
+			"text": true,
+			"link": true
+		}
+	},
+	"textdomain": "mr-headers",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,49 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+ .alternate_menu__wrapper{
+    box-shadow: 2.5px 4.33px 8px rgba(120,120,125,0.11);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    opacity: 0;
+    transform: translateY(-100%);
+    z-index: 100;
+}
+
+.alternate_menu__wrapper .current{
+    color: var(--accent);
+}
+
+.alternate_menu__wrapper .current:hover{
+    color: var(--accent-hover);
+}
+
+.alternate_menu{
+    display: flex;
+}
+
+.alternate_menu__logo{
+    width: 2.75rem; 
+    margin-right: .5rem;
+}
+
+.alternate_menu__logo>img{
+    display: block;
+    width: 100%;
+}
+
+.alternate_menu__menu{
+    width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+    .alternate_menu__wrapper{
+        display: none;
+    }
+}

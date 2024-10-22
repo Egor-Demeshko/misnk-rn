@@ -1,0 +1,29 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/rn-useful-links",
+	"version": "0.1.0",
+	"title": "Блок Полезные ссылки",
+	"category": "widgets",
+	"icon": "layout",
+	"description": "Блок позволяет добавлять ссылки и украшать их картинками",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "rn-useful-links",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"attributes": {
+		"blockTitle": {
+			"type": "string",
+			"default": "Полезные ссылки"
+		},
+		"linksData": {
+			"type": "array",
+			"default": []
+		}
+	}
+}

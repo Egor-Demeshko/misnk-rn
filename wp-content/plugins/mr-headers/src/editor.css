@@ -1,0 +1,31 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ @import url('./components/popover/popover.css');
+
+ .rn-header__is-hovered{
+    outline: 2px solid transparent;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: outline .2s ease;
+}
+
+.rn-header__is-hovered:hover{
+    outline: 2px solid var(--wp-admin-theme-color);
+}
+
+.mr-header-popover{
+    position: absolute;
+}
+
+.mr-header-left-position{
+    right: 1rem;
+    top: 1rem;
+}
+
+.mr-header-no-margin{
+    margin: 0;
+}

@@ -1,0 +1,20 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "rn-minsk/mr-menu",
+	"version": "0.1.0",
+	"title": "Menu Place Holder Block",
+	"category": "widgets",
+	"icon": "menu",
+	"description": "Menu placeholder block",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "mr-menu",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}

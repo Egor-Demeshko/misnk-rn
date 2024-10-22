@@ -1,0 +1,31 @@
+<mxfile host="Electron" modified="2024-10-06T10:37:00.595Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="9s7Py8doDUqphUNIfT4J" version="21.6.8" type="device">
+  <diagram name="Страница — 1" id="aEtyC0d7wopTHI4pcn7p">
+    <mxGraphModel dx="1434" dy="870" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2m0u3ruhcCbXiOcP3ahr-1" value="проверить&amp;nbsp; как работает setAttributes&amp;nbsp;&lt;br&gt;в reducer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="110" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2m0u3ruhcCbXiOcP3ahr-2" value="доделать прорисовку изображенийб добавление изображение" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="180" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2m0u3ruhcCbXiOcP3ahr-3" value="проверить как добавляется слайд" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2m0u3ruhcCbXiOcP3ahr-4" value="сделать updateSlide для сохранения общей инфы о слайдах" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="110" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2m0u3ruhcCbXiOcP3ahr-5" value="функция сохранения инфы одного слайда" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="250" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2m0u3ruhcCbXiOcP3ahr-6" value="создание ссылки" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="320" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2m0u3ruhcCbXiOcP3ahr-7" value="доделать ренденр" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="400" width="270" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
