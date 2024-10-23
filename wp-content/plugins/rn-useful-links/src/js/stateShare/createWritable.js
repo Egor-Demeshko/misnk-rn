@@ -2,20 +2,18 @@ export default function writable(initialValue = null){
     return Object.seal(
         {
             value: initialValue,
-            callbacks: new WeakSet(), 
-            subsribe,
+            callbacks: new Set(), 
+            subscribe,
             update,
         }
     );
 
-    function subsribe(callback){
+    function subscribe(callback){
         this.callbacks.add(callback);
     }
 
-    function update(value){
-        if(this.value === value) return;
-
-        this.value = value;
-        callbacks.forEach((callback) => callback(value));
+    function update(fn){
+        this.value = fn(this.value);
+        this.callbacks.forEach((callback) => callback(this.value));
     }
 } 

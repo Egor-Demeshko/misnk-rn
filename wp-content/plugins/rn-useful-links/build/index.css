@@ -214,5 +214,49 @@
 }
 /** --- END OF IMAGE CONTROLL --- */
 
+/** DELETE BUTTON **/
+.rn-useful-links-editor__delete {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	color: var(--wp-admin-theme-color);
+	cursor: pointer;
+}
+
+.rn-useful-links-editor__delete span::before {
+	transition: color 0.4s ease;
+}
+
+.rn-useful-links-editor__delete:hover {
+	color: var(--wp-admin-theme-color-darker-20);
+}
+
+.rn-useful-links-editor__delete_popup_wrapper {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 6px;
+}
+
+.rn-useful-links-editor__delete_popup {
+	padding: 0.6rem;
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 0.8rem;
+}
+
+.rn-useful-links-editor__delete_popup_wrapper h4 {
+	font-size: 1rem;
+	margin: 0;
+}
+
 
 /*# sourceMappingURL=index.css.map*/

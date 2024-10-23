@@ -1,0 +1,134 @@
+<mxfile host="Electron" modified="2024-10-23T15:11:38.286Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="9gK3zZB_tmlPoAyN8Tbz" version="21.6.8" type="device">
+  <diagram name="Страница — 1" id="7BSPSIEQ75UG-uUFEcr9">
+    <mxGraphModel dx="2620" dy="1088" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zD46Bb2mdfs4DIwWPmMm-1" value="разметка упаковки для карточек" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="30" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zD46Bb2mdfs4DIwWPmMm-2" value="добавить картинку заглушку на карточки в редакторе" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="390" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zD46Bb2mdfs4DIwWPmMm-3" value="разметка упаковки для карточек" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="100" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zD46Bb2mdfs4DIwWPmMm-4" value="разметка карточки" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="170" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zD46Bb2mdfs4DIwWPmMm-5" value="Кнопка добавить новую ссылку" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="320" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zD46Bb2mdfs4DIwWPmMm-6" value="для редактирования ссылки будем использовать правое меню" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="250" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="18PpUrSBNR_JKGlLKKcl-1" value="Password Generator" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="720" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="18PpUrSBNR_JKGlLKKcl-2" value="groupOfAllChars" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="790" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="18PpUrSBNR_JKGlLKKcl-3" value="additionalValidations" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="860" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="18PpUrSBNR_JKGlLKKcl-4" value="[a-z]{4}" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="270" y="860" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="evEb2kOMZZutYa0UeEdd-1" value="React Observer" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="21" y="970" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="evEb2kOMZZutYa0UeEdd-2" value="Подписать на получение нового состояние.&lt;br&gt;subscribe&amp;nbsp; будет получать callback&lt;br&gt;а этот коллбек буде тхранить состояние компонента" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="289" y="1060" width="249" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="evEb2kOMZZutYa0UeEdd-3" value="update принимает нового значени и уведомляет всех подписчиков, тоесть вызывает коллбеки и передает им новое значение." style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="1060" width="249" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="evEb2kOMZZutYa0UeEdd-4" value="unSubscribe&lt;br&gt;надо в useEffect&amp;nbsp;&lt;br&gt;чтоб очищал коллбек." style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="560" y="1060" width="249" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="BQjMG7QQG8j80ehFVdaD-1" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;ОБЪЕКТ&lt;/b&gt;&lt;br&gt;callbacks, WEAKSET&lt;br&gt;currentData&lt;br&gt;update&lt;br&gt;subscribe&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="1230" width="280" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="BQjMG7QQG8j80ehFVdaD-2" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;useEffect, делаем подписку&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="545" y="1790" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BQjMG7QQG8j80ehFVdaD-3" value="useState, сама функция кэшируется" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="558" y="1862" width="215" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="BQjMG7QQG8j80ehFVdaD-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.448;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="BQjMG7QQG8j80ehFVdaD-4" target="BQjMG7QQG8j80ehFVdaD-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="1840" />
+              <mxPoint x="20" y="1403" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BQjMG7QQG8j80ehFVdaD-4" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;карточка, id&lt;/b&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="1770" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="BQjMG7QQG8j80ehFVdaD-5" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;карточка, id&lt;/b&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="250" y="1770" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="BQjMG7QQG8j80ehFVdaD-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.014;entryY=0.461;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="BQjMG7QQG8j80ehFVdaD-13" target="BQjMG7QQG8j80ehFVdaD-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="1630" />
+              <mxPoint x="480" y="1406" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BQjMG7QQG8j80ehFVdaD-6" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;Окошко&lt;/b&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="530" y="1504" width="270" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="BQjMG7QQG8j80ehFVdaD-9" value="update" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-100" y="1630" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BQjMG7QQG8j80ehFVdaD-11" value="subscribe" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="390" y="1430" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="BQjMG7QQG8j80ehFVdaD-13" value="callback c setState" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="555" y="1660" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BQjMG7QQG8j80ehFVdaD-14" value="update - вызывает коллбек и передает туда новое значение" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100.5" y="1480" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BQjMG7QQG8j80ehFVdaD-15" value="subscribe - получает коллбек как аргумент&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100.5" y="1540" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="BQjMG7QQG8j80ehFVdaD-16" value="onClick" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="76" y="1893" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BQjMG7QQG8j80ehFVdaD-17" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;добавить карточку,&lt;br&gt;&lt;/b&gt;это просто пустой обьект, в окошко есть кнопка сохранить&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="251" y="1930" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="X4cxw4NT1FcUEhoL2SXF-1" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="695" y="1520" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="X4cxw4NT1FcUEhoL2SXF-2" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="240" y="1240" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="X4cxw4NT1FcUEhoL2SXF-3" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="81" y="1760" width="54" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="X4cxw4NT1FcUEhoL2SXF-4" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="272" y="1761" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="X4cxw4NT1FcUEhoL2SXF-5" value="createLinkdata doesn&#39;t work" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="1520" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X4cxw4NT1FcUEhoL2SXF-6" value="&lt;b&gt;правильно сохранение изменения картинки&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-780" y="1330" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X4cxw4NT1FcUEhoL2SXF-7" value="&lt;b&gt;Удаление ссылки&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-780" y="1400" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X4cxw4NT1FcUEhoL2SXF-8" value="&lt;b&gt;фиксировать еще imageId при сохранении&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-780" y="1480" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X4cxw4NT1FcUEhoL2SXF-9" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="-520" y="1290" width="54" height="54" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

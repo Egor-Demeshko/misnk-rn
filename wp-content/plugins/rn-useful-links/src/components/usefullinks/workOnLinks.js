@@ -1,5 +1,3 @@
-import createLinkData from "../../js/objects/linkData";
-
 export const DELETE_LINK = 'delete_link';
 export const ADD_LINK = 'add_link';
 export const UPDATE_LINK = 'update_link';
@@ -37,6 +35,8 @@ function updateLink(links, action){
         if(link.id === id){
             return {...link, ...action}
         }
+
+        return link;
     });
 }
 

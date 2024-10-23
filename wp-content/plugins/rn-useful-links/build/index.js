@@ -2,6 +2,72 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/components/buttons/DeleteButton.jsx":
+/*!*************************************************!*\
+  !*** ./src/components/buttons/DeleteButton.jsx ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ DeleteButton)
+/* harmony export */ });
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+function DeleteButton({
+  onDelete
+}) {
+  const [popup, setPopup] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false);
+  function cancel(e) {
+    e.stopPropagation();
+    setPopup(false);
+  }
+  function deleteSlide(e) {
+    e.stopPropagation();
+    setPopup(false);
+    setTimeout(() => onDelete());
+  }
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    className: "rn-useful-links-editor__delete",
+    onClick: () => setPopup(true),
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Удалить слайд", "rn-useful-links"),
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__.Dashicon, {
+      icon: "no"
+    }), popup && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__.Popover, {
+      className: "rn-useful-links-editor__delete_popup_wrapper",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        className: "rn-useful-links-editor__delete_popup",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h4", {
+          children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Вы уверены, что хотите удалить этот один слайд", "rn-slider")
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          className: "rn-useful-links-editor__delete_popup-buttons",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__.Button, {
+            variant: "primary",
+            onClick: cancel,
+            children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Отмена", "rn-slider")
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__.Button, {
+            isDestructive: true,
+            onClick: deleteSlide,
+            children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Удалить", "rn-slider")
+          })]
+        })]
+      })
+    })]
+  });
+}
+
+/***/ }),
+
 /***/ "./src/components/controllinkdata/AddLink.jsx":
 /*!****************************************************!*\
   !*** ./src/components/controllinkdata/AddLink.jsx ***!
@@ -12,46 +78,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ AddLink)
 /* harmony export */ });
-/* harmony import */ var _js_objects_linkData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../js/objects/linkData */ "./src/js/objects/linkData.js");
-/* harmony import */ var _ImageSetting__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ImageSetting */ "./src/components/controllinkdata/ImageSetting.jsx");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _usefullinks_workOnLinks__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../usefullinks/workOnLinks */ "./src/components/usefullinks/workOnLinks.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__);
-
-
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _js_stateShare_imagePicker__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../js/stateShare/imagePicker */ "./src/js/stateShare/imagePicker.js");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _js_objects_linkData__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../js/objects/linkData */ "./src/js/objects/linkData.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
 
 
 function AddLink({
-  updateLinks,
-  linksCount,
   title = "Добавить ссылку",
-  icon = "plus"
+  icon = "plus",
+  link = null,
+  linksCount
 }) {
-  const [openEditor, setOpenEditor] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
     className: "rn-useful-links-editor__card",
-    children: [openEditor && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-      className: "rn-useful-links-editor__add-link"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("button", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("button", {
       className: "rn-useful-links-editor__add-button",
-      onClick: () => setOpenEditor(true),
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Dashicon, {
+      onClick: () => (0,_js_stateShare_imagePicker__WEBPACK_IMPORTED_MODULE_1__.activateRedactor)(link !== null && link !== void 0 ? link : (0,_js_objects_linkData__WEBPACK_IMPORTED_MODULE_3__["default"])(linksCount + 1)),
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__.Dashicon, {
           icon: icon
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("p", {
-        children: [" ", (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)(title, "rn-useful-links"), " "]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("p", {
+        children: [" ", (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)(title, "rn-useful-links"), " "]
       })]
-    })]
+    })
   });
 }
 
@@ -73,15 +131,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function ControlImageFromRow({
-  linksCount,
-  updateLinks,
   link
 }) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     className: "rn-useful-links-editor__image-controll",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_AddLink__WEBPACK_IMPORTED_MODULE_0__["default"], {
       title: "Изменить информацию",
-      icon: "admin-customizer"
+      icon: "admin-customizer",
+      link: link
     })
   });
 }
@@ -136,7 +193,7 @@ function ImagePicker({
           className: "useful-links-editor__image_picker",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
             className: "useful-links-editor__image",
-            src: urlState !== null && urlState !== void 0 ? urlState : usefulLinks.pluginUrl + "assets/menu_image_placeholder.jpeg"
+            src: !urlState ? usefulLinks.pluginUrl + "assets/menu_image_placeholder.jpeg" : urlState
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(AddPicture, {
             open: open
           })]
@@ -173,15 +230,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _ImagePicker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ImagePicker */ "./src/components/controllinkdata/ImagePicker.jsx");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _ImagePicker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ImagePicker */ "./src/components/controllinkdata/ImagePicker.jsx");
 /* harmony import */ var _inputs_InputWithLabel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../inputs/InputWithLabel */ "./src/components/inputs/InputWithLabel.jsx");
-/* harmony import */ var _js_objects_linkData__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../js/objects/linkData */ "./src/js/objects/linkData.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _js_stateShare_imagePicker__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../js/stateShare/imagePicker */ "./src/js/stateShare/imagePicker.js");
+/* harmony import */ var _js_objects_linkData__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../js/objects/linkData */ "./src/js/objects/linkData.js");
+/* harmony import */ var _usefullinks_workOnLinks__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../usefullinks/workOnLinks */ "./src/components/usefullinks/workOnLinks.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__);
+
+
 
 
 
@@ -192,11 +253,10 @@ __webpack_require__.r(__webpack_exports__);
 
 function ImageSetting({
   updateLinks,
-  linksCount,
-  typeOfEvent,
-  link = null
+  linksCount
 }) {
-  const [linkData, setLinkData] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(link !== null && link !== void 0 ? link : (0,_js_objects_linkData__WEBPACK_IMPORTED_MODULE_6__["default"])(linksCount + 1));
+  var _linkData$link, _linkData$title;
+  const [linkData, setLinkData] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null);
   function updateData(data) {
     setLinkData({
       ...linkData,
@@ -204,39 +264,55 @@ function ImageSetting({
     });
   }
   function saveData() {
-    updateLinks({
-      ...linkData,
-      typeOfEvent
-    });
+    debugger;
+    if (linkData.id <= linksCount) {
+      updateLinks({
+        ...linkData,
+        type: _usefullinks_workOnLinks__WEBPACK_IMPORTED_MODULE_8__.UPDATE_LINK
+      });
+    } else {
+      updateLinks({
+        ...linkData,
+        type: _usefullinks_workOnLinks__WEBPACK_IMPORTED_MODULE_8__.ADD_LINK
+      });
+    }
   }
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.InspectorControls, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__.Panel, {
+  (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(() => {
+    _js_stateShare_imagePicker__WEBPACK_IMPORTED_MODULE_6__.CardPickerState.subscribe(value => {
+      if (!value.id || linkData && linkData.id === value.id) return;
+      const activeData = (0,_js_objects_linkData__WEBPACK_IMPORTED_MODULE_7__.createActiveData)(value);
+      setLinkData(activeData);
+    });
+  }, []);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, {
+    children: linkData && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__.Panel, {
       name: "rn-usefullinks-link",
       title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Редактирование ссылки"),
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__.PanelBody, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__.PanelBody, {
         className: "useful-links-editor__panel",
         icon: "heading",
         title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Редактирование ссылки"),
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_ImagePicker__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          updateData: updateData
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_inputs_InputWithLabel__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_ImagePicker__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          updateData: updateData,
+          link: linkData
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_inputs_InputWithLabel__WEBPACK_IMPORTED_MODULE_5__["default"], {
           updateData: updateData,
           field: "link",
-          value: linkData.link,
+          value: (_linkData$link = linkData?.link) !== null && _linkData$link !== void 0 ? _linkData$link : "",
           title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Укажите сcылку для перехода:")
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_inputs_InputWithLabel__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_inputs_InputWithLabel__WEBPACK_IMPORTED_MODULE_5__["default"], {
           updateData: updateData,
           field: "title",
-          value: linkData.title,
+          value: (_linkData$title = linkData?.title) !== null && _linkData$title !== void 0 ? _linkData$title : "",
           title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Укажите заголовок для ссылки:")
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__.Button, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_0__.Button, {
           onClick: saveData,
           className: "rn-useful-links-editor__save",
           isPrimary: true,
           children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Сохранить", "rn-useful-links")
         })]
       })
-    })
+    }, linkData.id)
   });
 }
 
@@ -301,30 +377,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ LinkCard)
 /* harmony export */ });
 /* harmony import */ var _controllinkdata_ControlImageFromRow__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../controllinkdata/ControlImageFromRow */ "./src/components/controllinkdata/ControlImageFromRow.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _usefullinks_workOnLinks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../usefullinks/workOnLinks */ "./src/components/usefullinks/workOnLinks.js");
+/* harmony import */ var _buttons_DeleteButton__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buttons/DeleteButton */ "./src/components/buttons/DeleteButton.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+
+
 
 
 function LinkCard({
-  linksCount,
-  updateLinks,
-  link
+  link,
+  updateLinks
 }) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+  function onDelete() {
+    updateLinks({
+      id: link.id,
+      type: _usefullinks_workOnLinks__WEBPACK_IMPORTED_MODULE_1__.DELETE_LINK
+    });
+  }
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "rn-useful-links-editor__card",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "rn-useful-links-editor__card-img-wrapper",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
         className: "rn-useful-links-editor__card-img",
         src: link.imgUrl
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
       className: "rn-useful-links-editor__card-text",
       children: link?.title
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_controllinkdata_ControlImageFromRow__WEBPACK_IMPORTED_MODULE_0__["default"], {
-      linksCount: linksCount,
-      updateLinks: updateLinks,
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_controllinkdata_ControlImageFromRow__WEBPACK_IMPORTED_MODULE_0__["default"], {
       link: link
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_buttons_DeleteButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      id: link.id,
+      onDelete: onDelete
     })]
   });
 }
@@ -361,7 +447,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 function UsefulLinks({
   attributes,
   setAttributes
@@ -386,9 +471,7 @@ function UsefulLinks({
     className: "rn-useful-links-editor",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_controllinkdata_ImageSetting__WEBPACK_IMPORTED_MODULE_6__["default"], {
       updateLinks: updateLinks,
-      linksCount: links.length,
-      link: link,
-      typeOfEvent: _workOnLinks__WEBPACK_IMPORTED_MODULE_3__.UPDATE_LINK
+      linksCount: links.length
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
       tagName: "h4",
       value: title,
@@ -398,11 +481,9 @@ function UsefulLinks({
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
       className: "rn-useful-links-editor__list",
       children: [links.length > 0 && links.map(link => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_linkcard_LinkCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        linksCount: links.length,
-        updateLinks: updateLinks,
-        link: link
+        link: link,
+        updateLinks: updateLinks
       }, link.id)), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_controllinkdata_AddLink__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        updateLinks: updateLinks,
         linksCount: links.length
       })]
     })]
@@ -424,8 +505,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   UPDATE_LINK: () => (/* binding */ UPDATE_LINK),
 /* harmony export */   "default": () => (/* binding */ wirkOnLinks)
 /* harmony export */ });
-/* harmony import */ var _js_objects_linkData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../js/objects/linkData */ "./src/js/objects/linkData.js");
-
 const DELETE_LINK = 'delete_link';
 const ADD_LINK = 'add_link';
 const UPDATE_LINK = 'update_link';
@@ -469,6 +548,7 @@ function updateLink(links, action) {
         ...action
       };
     }
+    return link;
   });
 }
 
@@ -602,15 +682,81 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createActiveData: () => (/* binding */ createActiveData),
 /* harmony export */   "default": () => (/* binding */ createLinkData)
 /* harmony export */ });
+const linkDataFields = ['id', 'title', 'imgUrl', 'link'];
 function createLinkData(id) {
-  return Object.seal({
-    id,
-    title: '',
-    imgUrl: '',
-    link: ''
+  const obj = {};
+  setFields(obj, id);
+  return Object.seal(obj);
+}
+function createActiveData(data) {
+  const obj = {};
+  setFields(obj, null, data);
+  return Object.seal(obj);
+}
+function setFields(obj, id = null, data = null) {
+  if (data && !data.id) {
+    throw new Exception("[RN-Useful-Links]: Link data must have id field");
+  }
+  linkDataFields.forEach(field => {
+    if (data) {
+      obj[field] = data[field];
+    } else if (field === 'id') {
+      obj[field] = id;
+    } else {
+      obj[field] = '';
+    }
   });
+}
+
+/***/ }),
+
+/***/ "./src/js/stateShare/createWritable.js":
+/*!*********************************************!*\
+  !*** ./src/js/stateShare/createWritable.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ writable)
+/* harmony export */ });
+function writable(initialValue = null) {
+  return Object.seal({
+    value: initialValue,
+    callbacks: new Set(),
+    subscribe,
+    update
+  });
+  function subscribe(callback) {
+    this.callbacks.add(callback);
+  }
+  function update(fn) {
+    this.value = fn(this.value);
+    this.callbacks.forEach(callback => callback(this.value));
+  }
+}
+
+/***/ }),
+
+/***/ "./src/js/stateShare/imagePicker.js":
+/*!******************************************!*\
+  !*** ./src/js/stateShare/imagePicker.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   CardPickerState: () => (/* binding */ CardPickerState),
+/* harmony export */   activateRedactor: () => (/* binding */ activateRedactor)
+/* harmony export */ });
+/* harmony import */ var _createWritable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createWritable */ "./src/js/stateShare/createWritable.js");
+
+const CardPickerState = (0,_createWritable__WEBPACK_IMPORTED_MODULE_0__["default"])();
+function activateRedactor(link) {
+  CardPickerState.update(oldValue => link);
 }
 
 /***/ }),

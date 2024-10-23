@@ -5,7 +5,6 @@ import workOnLinks from "./workOnLinks";
 import LinkCard from "../linkcard/LinkCard";
 import AddLink from "../controllinkdata/AddLink";
 import ImageSetting from "../controllinkdata/ImageSetting";
-import { UPDATE_LINK } from "./workOnLinks";
 
 export default function UsefulLinks({ attributes, setAttributes }) {
 	// blockTitle // linksData
@@ -22,12 +21,7 @@ export default function UsefulLinks({ attributes, setAttributes }) {
 
 	return (
 		<section className="rn-useful-links-editor">
-			<ImageSetting
-				updateLinks={updateLinks}
-				linksCount={links.length}
-				link={link}
-				typeOfEvent={UPDATE_LINK}
-			/>
+			<ImageSetting updateLinks={updateLinks} linksCount={links.length} />
 			<RichText
 				tagName={"h4"}
 				value={title}
@@ -39,14 +33,9 @@ export default function UsefulLinks({ attributes, setAttributes }) {
 			<div className="rn-useful-links-editor__list">
 				{links.length > 0 &&
 					links.map((link) => (
-						<LinkCard
-							key={link.id}
-							linksCount={links.length}
-							updateLinks={updateLinks}
-							link={link}
-						/>
+						<LinkCard key={link.id} link={link} updateLinks={updateLinks} />
 					))}
-				<AddLink updateLinks={updateLinks} linksCount={links.length} />
+				<AddLink linksCount={links.length} />
 			</div>
 		</section>
 	);

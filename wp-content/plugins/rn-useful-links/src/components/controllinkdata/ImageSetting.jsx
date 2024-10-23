@@ -1,59 +1,72 @@
 import { PanelBody, Panel, Button } from "@wordpress/components";
 import { __ } from "@wordpress/i18n";
-import ImagePicker from "./ImagePicker";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { InspectorControls } from "@wordpress/block-editor";
+import ImagePicker from "./ImagePicker";
 import InputWithLabel from "../inputs/InputWithLabel";
-import createLinkData from "../../js/objects/linkData";
+import { CardPickerState } from "../../js/stateShare/imagePicker";
+import { createActiveData } from "../../js/objects/linkData";
+import { UPDATE_LINK, ADD_LINK } from "../usefullinks/workOnLinks";
 
-export default function ImageSetting({
-	updateLinks,
-	linksCount,
-	typeOfEvent,
-	link = null,
-}) {
-	const [linkData, setLinkData] = useState(
-		link ?? createLinkData(linksCount + 1),
-	);
-
+export default function ImageSetting({ updateLinks, linksCount }) {
+	const [linkData, setLinkData] = useState(null);
 	function updateData(data) {
 		setLinkData({ ...linkData, ...data });
 	}
 
 	function saveData() {
-		updateLinks({ ...linkData, typeOfEvent });
+		debugger;
+		if (linkData.id <= linksCount) {
+			updateLinks({ ...linkData, type: UPDATE_LINK });
+		} else {
+			updateLinks({ ...linkData, type: ADD_LINK });
+		}
 	}
+
+	useEffect(() => {
+		CardPickerState.subscribe((value) => {
+			if (!value.id || (linkData && linkData.id === value.id)) return;
+			const activeData = createActiveData(value);
+			setLinkData(activeData);
+		});
+	}, []);
 
 	return (
 		<InspectorControls>
-			<Panel name="rn-usefullinks-link" title={__("Редактирование ссылки")}>
-				<PanelBody
-					className={"useful-links-editor__panel"}
-					icon={"heading"}
+			{linkData && (
+				<Panel
+					key={linkData.id}
+					name="rn-usefullinks-link"
 					title={__("Редактирование ссылки")}
 				>
-					<ImagePicker updateData={updateData} />
-					<InputWithLabel
-						updateData={updateData}
-						field={"link"}
-						value={linkData.link}
-						title={__("Укажите сcылку для перехода:")}
-					/>
-					<InputWithLabel
-						updateData={updateData}
-						field={"title"}
-						value={linkData.title}
-						title={__("Укажите заголовок для ссылки:")}
-					/>
-					<Button
-						onClick={saveData}
-						className="rn-useful-links-editor__save"
-						isPrimary
+					<PanelBody
+						className={"useful-links-editor__panel"}
+						icon={"heading"}
+						title={__("Редактирование ссылки")}
 					>
-						{__("Сохранить", "rn-useful-links")}
-					</Button>
-				</PanelBody>
-			</Panel>
+						<ImagePicker updateData={updateData} link={linkData} />
+						<InputWithLabel
+							updateData={updateData}
+							field={"link"}
+							value={linkData?.link ?? ""}
+							title={__("Укажите сcылку для перехода:")}
+						/>
+						<InputWithLabel
+							updateData={updateData}
+							field={"title"}
+							value={linkData?.title ?? ""}
+							title={__("Укажите заголовок для ссылки:")}
+						/>
+						<Button
+							onClick={saveData}
+							className="rn-useful-links-editor__save"
+							isPrimary
+						>
+							{__("Сохранить", "rn-useful-links")}
+						</Button>
+					</PanelBody>
+				</Panel>
+			)}
 		</InspectorControls>
 	);
 }

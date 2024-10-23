@@ -23,8 +23,10 @@ export default function ImagePicker({ updateData, link = null }) {
 							<img
 								className="useful-links-editor__image"
 								src={
-									urlState ??
-									usefulLinks.pluginUrl + "assets/menu_image_placeholder.jpeg"
+									!urlState
+										? usefulLinks.pluginUrl +
+										  "assets/menu_image_placeholder.jpeg"
+										: urlState
 								}
 							/>
 							<AddPicture open={open} />

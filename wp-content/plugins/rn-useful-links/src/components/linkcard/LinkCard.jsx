@@ -1,6 +1,12 @@
 import ControlImageFromRow from "../controllinkdata/ControlImageFromRow";
+import { DELETE_LINK } from "../usefullinks/workOnLinks";
+import DeleteButton from "../buttons/DeleteButton";
 
-export default function LinkCard({ linksCount, updateLinks, link }) {
+export default function LinkCard({ link, updateLinks }) {
+	function onDelete() {
+		updateLinks({ id: link.id, type: DELETE_LINK });
+	}
+
 	return (
 		<div className="rn-useful-links-editor__card">
 			<div className="rn-useful-links-editor__card-img-wrapper">
@@ -10,11 +16,8 @@ export default function LinkCard({ linksCount, updateLinks, link }) {
 				></img>
 			</div>
 			<p className="rn-useful-links-editor__card-text">{link?.title}</p>
-			<ControlImageFromRow
-				linksCount={linksCount}
-				updateLinks={updateLinks}
-				link={link}
-			/>
+			<ControlImageFromRow link={link} />
+			<DeleteButton id={link.id} onDelete={onDelete} />
 		</div>
 	);
 }
